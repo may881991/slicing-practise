@@ -1,0 +1,641 @@
+html, body {
+     font-family: 'Yantramanav', sans-serif;
+     width: 100%;
+     height: 100%;
+}
+ html,body,h1,ul,li,a{
+     margin: 0;
+     padding: 0;
+}
+ li{
+     list-style: none;
+     line-height: 1;
+}
+#wrapper.background-lg-image{
+    background: #000 url('../img/img-1280x800.jpg') no-repeat left center;
+    background-size: 100%;
+    animation: animatedBackground 5s linear;
+}
+
+
+#wrapper.background-md-image{
+    background:  #000 url('../img/img-1280x800.jpg') no-repeat left center fixed;
+    background-size: 100%;
+    animation: animatedBackground 5s linear;
+}
+
+ #wrapper.background-sm-image{
+    background: #000 url('../img/img-800x368.jpg') no-repeat center 15% fixed;
+    flex-flow: column nowrap;
+    display: flex;
+}
+
+@keyframes animatedBackground {
+    0%   { background-size: 80% auto; }
+    50% { background-size: 100% auto; }
+    100% { background-size: 80% auto; }
+}
+
+ #wrapper{
+     width: 100%;
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: flex-start;
+     align-items: stretch;
+     align-content: stretch;
+}
+ #wrapper > * {
+     flex: 1 auto;
+}
+ #wrapper header{
+     margin-top: 1%;
+     order: 1;
+}
+ header,.overlay-text,.overlay-text2,footer{
+     z-index: 9;
+     position: relative;
+}
+ #wrapper main{
+     order: 2;
+     flex: 100 0px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+#wrapper.active main{
+  order: 2;
+  flex: 100 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+ #wrapper nav{
+     text-align: right;
+     right: 0;
+     order: 3;
+     z-index: 9;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ #wrapper footer{
+     text-align: center;
+     text-decoration: none;
+     order: 4;
+     bottom: 0;
+     position: fixed;
+     width: 100%;
+}
+ header a{
+     color: #333;
+     text-decoration: none;
+}
+ footer a{
+     font-size: 2rem;
+     color: #5182bb;
+}
+.indicator1{
+       width: 30px;
+       display: inline-block;
+       background: #5182bb;
+       padding: 1px;
+  }
+.indicator2{
+   width: 15px;
+   display: inline-block;
+   background: #383a3c;
+   padding: 1px;
+}
+ .overlay-text,.overlay-text2{
+     text-align: center;
+}
+ .overlay-text h1,.overlay-text2 h1{
+     font-size: 2rem;
+     text-transform: uppercase;
+}
+ .overlay-text p,.overlay-text2 p{
+     font-size: 1.5rem;
+     padding: 0px 10%;
+}
+ .logo{
+     font-size: 1.5rem;
+     border: 1px solid #666;
+     color: #666;
+     padding: 3px 25px;
+     margin-left: 1em;
+}
+ .more{
+    right: 0;
+    color: #c7c7c7;
+    margin-right: 2%;
+    position: fixed;
+    top: 2%;
+}
+ .overlay-text hr{
+     width: 90px;
+     border: 2px solid #333;
+     margin: 0 auto;
+}
+ .video-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(255,255,255,0.5);
+     z-index: 2;
+}
+ .video{
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     min-width: 100%;
+     min-height: 100%;
+     z-index: 1;
+}
+ .slide2{
+     display: flex;
+}
+ .image img{
+     width: 100%;
+     height: 100%;
+}
+.text h1{
+     font-size: 7vw;
+     margin: 0px;
+}
+.text p{
+     text-align: left;
+     font-size: 4vw;
+     font-weight: normal;
+}
+ .slide2 > div {
+     color: white;
+     border-radius: 3px;
+     flex: 1;
+}
+
+.active .slide2{
+    padding: 0 5%;
+}
+
+.active .slide2 > div {
+     color: white;
+     border-radius: 3px;
+     flex: 1 auto;
+}
+
+ @font-face {
+     font-family: 'Glyphicons Halflings';
+     src: url('../fonts/glyphicons-halflings-regular.eot');
+     src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+ .glyphicons{
+     position: relative;
+     margin-left: 7px;
+     margin-right: 7px;
+     display: inline-block;
+     font-family: 'Glyphicons Halflings';
+     font-style: normal;
+     font-weight: normal;
+     vertical-align: middle;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+ .glyphicons-chevron-down:before{
+     content: "\e114";
+}
+
+@keyframes animatedBackground {
+     0%   { background-size: 80% auto; }
+     50% { background-size: 100% auto; }
+      100% { background-size: 80% auto; }
+}
+
+
+@media screen and (min-width: 980px) /* Desktop */ {
+  body {
+    background: red;
+  }
+  .logo{
+         font-size: 1.5rem;
+         border: 1px solid #666;
+         color: #666;
+         padding: 3px 25px;
+         margin-left: 1em;
+    }
+     .more{
+        right: 0;
+        color: #c7c7c7;
+        margin-right: 2%;
+        position: fixed;
+        top: 2%;
+    }
+     .overlay-text h1,.overlay-text2 h1{
+         font-size: 2rem;
+         text-transform: uppercase;
+    }
+     .overlay-text p,.overlay-text2 p{
+         font-size: 1.5rem;
+         padding: 0px 16%;
+    }
+     .overlay-text hr{
+         width: 90px;
+         border: 2px solid #333;
+         margin: 0 auto;
+    }
+     .video-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(255,255,255,0.5);
+         z-index: 2;
+    }
+     .video{
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         min-width: 100%;
+         min-height: 100%;
+         z-index: 1;
+    }
+     .slide2{
+         display: flex;
+    }
+     .image img{
+         width: 100%;
+         height: 100%;
+    }
+     .text h1{
+         font-size: 3.2rem;
+         margin: 0px;
+    }
+     .text p{
+         text-align: left;
+         font-size: 1.5rem;
+         font-weight: normal;
+    }
+     .slide2 > div {
+         color: white;
+         border-radius: 3px;
+         flex: 1;
+    }
+}
+
+@media screen  and (max-width: 979px) /* Tablet */ {
+  body {
+    background: blue;
+  }
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+  body {
+    background: green;
+  }
+}
+
+/* For Laptops devices*/
+/* @media only screen and (min-width: 1240px) {
+
+     .logo{
+         font-size: 1.5rem;
+         border: 1px solid #666;
+         color: #666;
+         padding: 3px 25px;
+         margin-left: 1em;
+    }
+     .more{
+        right: 0;
+        color: #c7c7c7;
+        margin-right: 2%;
+        position: fixed;
+        top: 2%;
+    }
+     .overlay-text h1,.overlay-text2 h1{
+         font-size: 2rem;
+         text-transform: uppercase;
+    }
+     .overlay-text p,.overlay-text2 p{
+         font-size: 1.5rem;
+         padding: 0px 16%;
+    }
+     .overlay-text hr{
+         width: 90px;
+         border: 2px solid #333;
+         margin: 0 auto;
+    }
+     .video-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(255,255,255,0.5);
+         z-index: 2;
+    }
+     .video{
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         min-width: 100%;
+         min-height: 100%;
+         z-index: 1;
+    }
+     .slide2{
+         display: flex;
+    }
+     .image img{
+         width: 100%;
+         height: 100%;
+    }
+     .text h1{
+         font-size: 3.2rem;
+         margin: 0px;
+    }
+     .text p{
+         text-align: left;
+         font-size: 1.5rem;
+         font-weight: normal;
+    }
+     .slide2 > div {
+         color: white;
+         border-radius: 3px;
+         flex: 1;
+    }
+} */
+
+@media only screen and (min-width: 780px) and (max-width: 1240px){
+    #wrapper header{
+         margin-top: 1.5%;
+    }
+
+     .logo{
+         font-size: 1.5rem;
+         border: 1px solid #666;
+         color: #666;
+         padding: 3px 25px;
+         margin-left: 1em;
+    }
+     .more{
+        right: 0;
+        color: #c7c7c7;
+        margin-right: 2%;
+        position: fixed;
+        top: 2%;
+    }
+     .overlay-text,.overlay-text2{
+         flex: 3 0px;
+         text-align: center;
+    }
+     .overlay-text h1,.overlay-text2 h1{
+         font-size: 2rem;
+         text-transform: uppercase;
+    }
+     .overlay-text p,.overlay-text2 p{
+         font-size: 1.5rem;
+         padding: 0px 8%;
+         margin: 0 auto;
+    }
+     .overlay-text hr{
+         width: 87px;
+         border: 2px solid #333;
+         margin: 0 auto;
+    }
+     .video-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(255,255,255,0.5);
+         z-index: 2;
+    }
+     .video{
+         position: fixed;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         display: flex;
+         object-fit: fill;
+         z-index: 1;
+    }
+     .slide2{
+         display: flex;
+    }
+     .image img{
+         width: 100%;
+         height: 100%;
+    }
+     .slide2 > div.text{
+         order: 2;
+         color: white;
+    }
+    .text h1{
+         font-size: 3rem;
+         margin: 0px;
+    }
+    .text p{
+         text-align: left;
+         font-size: 1.1rem;
+         font-weight: normal;
+    }
+     .slide2 > div {
+         color: white;
+         border-radius: 3px;
+         flex: 1;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 780px){
+
+    .text h1{
+         font-size: 2rem;
+         margin: 0px;
+    }
+    .text p{
+         text-align: left;
+         font-size: 1.1rem;
+         font-weight: normal;
+    }
+}
+
+/* For Ipad Portrait and Landscape */
+ @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+     #wrapper header{
+         margin-top: 1.5%;
+    }
+    #wrapper main {
+        order: 2;
+        flex: 100 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     .logo{
+         font-size: 1.5rem;
+         border: 1px solid #666;
+         color: #666;
+         padding: 3px 25px;
+         margin-left: 1em;
+    }
+     .more{
+        right: 0;
+        color: #c7c7c7;
+        margin-right: 2%;
+        position: fixed;
+        top: 2%;
+    }
+     .overlay-text,.overlay-text2{
+         flex: 3 0px;
+    }
+     .overlay-text h1,.overlay-text2 h1{
+         font-size: 2rem;
+         text-transform: uppercase;
+    }
+     .overlay-text p,.overlay-text2 p{
+         font-size: 1.5rem;
+         padding: 0px 8%;
+         margin: 0 auto;
+    }
+     .overlay-text hr{
+         width: 87px;
+         border: 2px solid #333;
+         margin: 0 auto;
+    }
+     .video-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(255,255,255,0.5);
+         z-index: 2;
+    }
+     .video{
+         position: fixed;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         display: flex;
+         object-fit: fill;
+         z-index: 1;
+    }
+     .slide2{
+         display: flex;
+    }
+     .image img{
+         width: 100%;
+         height: 100%;
+    }
+     .slide2 > div.text{
+         order: 2;
+         color: white;
+    }
+     .text h1{
+         font-size: 2rem;
+         margin: 0px;
+    }
+     .text p{
+         text-align: left;
+         font-size: 1.1rem;
+         font-weight: normal;
+    }
+     .slide2 > div {
+         color: white;
+         border-radius: 3px;
+         flex: 1;
+    }
+}
+/* For Mobile Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #wrapper main {
+        flex: 1 100%;
+        display: flex;
+    }
+
+    #wrapper header{
+         margin-top: 3%;
+    }
+
+     .overlay-text,.overlay-text2{
+         text-align: center;
+    }
+     
+     #wrapper nav{
+         text-align: center;
+         right: 0;
+         order: 3;
+         z-index: 9;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
+     #wrapper footer{
+         text-align: center;
+         text-decoration: none;
+         order: 4;
+         bottom: 0;
+         position: fixed;
+         width: 100%;
+    }
+    .logo{
+         font-size: 1rem;
+    }
+     .more{
+        right: 0;
+        color: #c7c7c7;
+        margin-right: 2%;
+        position: fixed;
+        top: 2%;
+    }
+     .overlay-text h1,.overlay-text2 h1{
+         font-size: 1.8rem;
+         text-transform: uppercase;
+    }
+     .overlay-text p,.overlay-text2 p{
+         font-size: 1.2rem;
+         padding: 0 2%;
+    }
+     .overlay-text hr{
+         width: 80px;
+    }
+    .slide2{
+         display: flex;
+         padding: 0 5%;
+    }
+    
+     .text h1{
+         font-size: 2rem;
+         margin: 0px;
+    }
+     .text p{
+         text-align: left;
+         font-size: 1rem;
+         font-weight: normal;
+    }
+     .slide2 > div {
+         color: white;
+         border-radius: 3px;
+         flex: 1 auto;
+    }
+     .video-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(255,255,255,0.5);
+         z-index: 2;
+    }
+     .video{
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         z-index: 1;
+    }
+}
